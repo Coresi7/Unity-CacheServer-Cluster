@@ -7,7 +7,7 @@ Recommend to run it on linux rather than windows (but windows should work).
 Cluster version of cache server won't try to delete old cache or free space because it might conflict to do so using workers.  
 However, it used to removes old cache based on file's access time. You may try to remove old cache using external tool or by bash.  
 
-For example:
+For example (delete cache files who has not been visited for more than 200 days. Please make sure your OS has enabled file's access time updating by reading.):
 
 ``` bash
 cd ${Path_To_Cache_Dir}
