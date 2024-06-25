@@ -19,7 +19,7 @@ Launch CacheServer example:
 ${Path_To_Nodejs} main.js --path ${Path_To_Cache_Dir} > ${Path_To_Log_File}.log
 ```
 
-You may change workers type in CacheServer.js's Start method.  
+You may change workers number in CacheServer.js's Start method.  
 Recommend to start 1 worker per 16GB of memory. For example, if you have 128GB ram, try to start 8 workers.
 ``` js
 exports.Start = function(a_cacheSize, a_port, a_path, a_logFn, a_errCallback)
