@@ -5,7 +5,7 @@ Should work for Unity AssetDatabase v1, does not support Unity versions priorior
 This feature is useful for huge amount of team to collaborate with the same cache server for huge projects.  
 Will allocate workers per 16GB of memory. Recommend to deploy it to a large ram and large SSD disk space machine.  
 Recommend to run it on linux rather than windows (but windows should work).  
-Cluster version of cache server won't try to delete old cache or free space because it might conflict to do so using workers.  
+The cluster version of cache server WON'T try to delete old cache or free space because it might conflict to do so using workers.  
 However, it used to removes old cache based on file's access time. You may try to remove old cache using external tool or by bash.  
 
 For example (delete cache files who has not been visited for more than 200 days. Please make sure your OS has enabled file's access time updating by reading.):
