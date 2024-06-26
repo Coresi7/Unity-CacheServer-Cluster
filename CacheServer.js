@@ -1135,7 +1135,10 @@ exports.StartSingle = function (a_cacheSize, a_port, a_path, a_logFn, a_errCallb
 
 
 var cluster = require ('cluster');
-var numCPUs = require ('os').cpus ().length;
+// var numCPUs = require ('os').cpus ().length;
+var numMem = require('os').totalmem() / 1024 / 1024 / 1024;
+// Divide total memory by 16.
+var workersCount = Math.ceil(numMem / 16);
 // /**
 //  * start the cache server uses cluster for multi-core optimization.
 //  *
@@ -1154,11 +1157,11 @@ exports.Start = function(a_cacheSize, a_port, a_path, a_logFn, a_errCallback)
 
     if (cluster.isMaster)
     {
-        log (INFO, "Master is running");
+        log (INFO, "Master is running, allocate " + workersCount + " workers");
 
         // Fork workers.
         // for (var i = 0; i < numCPUs; i++)
-        for (var i = 0; i < 2; i++) // start only 2 nodes for test.
+        for (var i = 0; i < workersCount; i++) // start only 2 nodes for test.
         {
             cluster.fork();
         }
