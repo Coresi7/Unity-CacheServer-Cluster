@@ -20,4 +20,4 @@ Launch CacheServer example:
 ${Path_To_Nodejs} main.js --path ${Path_To_Cache_Dir} > ${Path_To_Log_File}.log
 ```
 
-Tested on tlinux 2.2 (like CentOS 7.9 based on linux kernel 3.10.107), E5-2670v3 with 128GB of memory, and more than 2TB of cache with more than 100 people of team.  
+Tested on tlinux 2.2 (like CentOS 7.9 based on linux kernel 3.10.107) with nodejs v0.12.7, E5-2670v3 with 128GB of memory, and more than 2TB of cache with more than 100 people of team.  
