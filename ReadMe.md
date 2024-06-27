@@ -21,3 +21,4 @@ ${Path_To_Nodejs} main.js --path ${Path_To_Cache_Dir} > ${Path_To_Log_File}.log
 ```
 
 Tested on tlinux 2.2 (like CentOS 7.9 based on linux kernel 3.10.107) with nodejs v0.12.7, E5-2670v3 with 128GB of memory, and more than 2TB of cache with more than 100 people of team.  
+Recommend to use the same version as me, tried on node 16 and looks like node 16 is significantly slower than node v0.12.7.  
